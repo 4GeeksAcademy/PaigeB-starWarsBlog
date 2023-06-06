@@ -15,9 +15,9 @@ export const Home = () => {
 		<div className="text-center mt-5">
 			<Navbar/>
 			<Header/>
-			<Cards/>
+			<Cards characters={store.characters}/>
 			<HeaderPlanets/>
-			<Planets/>
+			<Planets planets={store.planets}/>
 		</div>
 	);
 };
