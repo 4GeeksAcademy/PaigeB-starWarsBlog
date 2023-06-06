@@ -6,9 +6,9 @@ const Cards = (props) => {
     <div>
     {props.characters.map((item) => {
       return (
-        <div class="row row-cols-1 row-cols-md-3 g-4 d-flex">
-        <div class="row">
-          <div class="card h-100">
+        <div class="characters horizontalScroll">
+        <div class="fullCard">
+          <div class="CharacterCard-body">
             <img
               src="https://sketchok.com/images/articles/02-comics/007-star-wars/10/17.jpg"
               class="card-img-top"
@@ -18,8 +18,8 @@ const Cards = (props) => {
               <h5 class="card-title">{item.name}</h5>
               <p class="card-text">
                 <p>Gender: {item.gender}</p>
-                <p>Hair color: </p>
-                <p>Eye-color: </p>
+                <p>Hair color:{item.hair_color} </p>
+                <p>Eye-color: {item.eye_color} </p>
               </p>
             </div>
             <div class="card-footer">

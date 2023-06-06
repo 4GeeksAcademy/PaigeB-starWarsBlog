@@ -63,17 +63,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch((error) => {console.log(error)})
 			},
 			getPlanets: () => {
-				fetch("https://swapi.dev/api/people")
+				fetch("https://swapi.dev/api/planets")
 					.then((respond) => respond.json())
 					.then((data) => {
 						console.log(data,"this is the data")
 						setStore({
-							characters:data.results
+							planets:data.results
 						})
 					})
 					.catch((error) => {console.log(error)})
 		}
-	};
+	}
 };
 
+}
 export default getState;
