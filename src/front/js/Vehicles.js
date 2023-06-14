@@ -1,10 +1,10 @@
 import React from "react";
-const Planets = (props) => {
+const Vehicles = (props) => {
 
-  console.log(props.planets)
+  console.log(props.vehicles, "HERE")
     return (
       <div>
-     {props.planets.map((item) => {
+     {props.vehicles.map((item) => {
       return (
         <div className="characters horizontalScroll">
         <div className="fullCard">
@@ -17,8 +17,8 @@ const Planets = (props) => {
             <div className="card-body">
               <h5 className="card-title">{item.name}</h5>
               <p className="card-text">
-                <p>Population: {item.population}</p>
-                <p>Climate:{item.climate} </p>
+                <p>Manufacturer: {item.manufacturer}</p>
+                <p>Passenger:{item.passenger} </p>
               </p>
             </div>
             <div className="card-footer">
@@ -44,4 +44,4 @@ const Planets = (props) => {
   
     };
   
-export default Planets;
+export default Vehicles;

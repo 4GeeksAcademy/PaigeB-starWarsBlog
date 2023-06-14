@@ -3,42 +3,46 @@ const Cards = (props) => {
  
   console.log(props.characters)
   return (
-    <div>
+    <div className= "d-flex overflow-auto w-75 mx-auto">
+    <div className="d-flex">
     {props.characters.map((item) => {
       return (
-        <div class="characters horizontalScroll">
-        <div class="fullCard">
-          <div class="CharacterCard-body">
+        <div className="characters horizontalScroll">
+        <div className="fullCard">
+          <div className="CharacterCard-body">
             <img
               src="https://sketchok.com/images/articles/02-comics/007-star-wars/10/17.jpg"
-              class="card-img-top"
+              className="card-img-top"
               alt="..."
+              height="250px" width="200px"
             />
-            <div class="card-body">
-              <h5 class="card-title">{item.name}</h5>
-              <p class="card-text">
+            <div className="card-body">
+              <h5 className="card-title">{item.name}</h5>
+              <p className="card-text">
                 <p>Gender: {item.gender}</p>
                 <p>Hair color:{item.hair_color} </p>
                 <p>Eye-color: {item.eye_color} </p>
               </p>
             </div>
-            <div class="card-footer">
-              <button type="button" class="btn btn-outline-primary">
+            <div className="card-footer">
+              <button type="button" className="btn btn-outline-primary">
                 Learn More!
               </button>
             </div>
           </div>
         </div>
         
+        
     
 
   
-    
+          
 
 
    </div>
    
   ); })}
+  </div>
   </div>)
 };
 export default Cards;

@@ -16,6 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			characters: [], 
 			planets: [],
+			vehicles: [],
 
 			
 		},
@@ -72,7 +73,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 						})
 					})
 					.catch((error) => {console.log(error)})
-		}
+		},
+		getVehicles: () => {
+			fetch("https://swapi.dev/api/vehicles")
+				.then((respond) => respond.json())
+				.then((data) => {
+					console.log(data,"this is the data")
+					setStore({
+						vehicles:data.results
+					})
+				})
+				.catch((error) => {console.log(error)})
+	}
 	}
 };
 
